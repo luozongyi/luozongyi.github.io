@@ -18,6 +18,15 @@
             background: linear-gradient(180deg, #629fea, #0434af, #01195a);
         }
 
+        .nav img {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            height: 80px;
+            background-color: #416ba7;
+
+        }
+
         .main,
         .mave {
             width: 300px;
@@ -69,6 +78,7 @@
 </head>
 
 <body>
+    <div class="nav"><img src="./image/skin-clickmove-title.2730b604.gif" alt="" srcset=""></div>
     <div class="main">
         <div class="mave"></div>
     </div>
@@ -78,7 +88,7 @@
     var index = 0;
     jQuery(document).ready(function ($) {
         $("body").click(function (e) {
-            var coreVal = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤","你打我呀", "❤公正❤", "❤法治❤", "❤爱国❤", "❤敬业❤", "❤诚信❤", "❤友善❤");
+            var coreVal = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "你打我呀", "❤公正❤", "❤法治❤", "❤爱国❤", "❤敬业❤", "❤诚信❤", "❤友善❤");
             var $i = $("<span></span>").text(coreVal[index]);
             index = (index + 1) % coreVal.length;
             var x = e.pageX,
