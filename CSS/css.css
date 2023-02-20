@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, #629fea, #0434af, #01195a);
+}
+
+.nav img {
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    height: auto;
+    min-height: 30px;
+    background-color: #416ba7;
+}
+
+@media (max-width:921px) {
+    .nav img {
+        max-width: 150%;
+        left: -50%;
+        min-height: 50px;
+    }
+}
+
+.main,
+.mave {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.main {
+    border: 3px solid #79caf3;
+    padding: 10px;
+}
+
+.mave {
+    background-color: #79caf3;
+    overflow: hidden;
+}
+
+.mave::before {
+    content: "";
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, .5);
+    position: absolute;
+    border-radius: 40%;
+    transform: translate(-20%, -70%);
+    animation: mave 8s linear infinite alternate;
+}
+
+.mave::after {
+    content: "water";
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    color: #fff;
+    transform: translate(-50%, 40px);
+    text-transform: uppercase;
+}
+
+@keyframes mave {
+    to {
+        transform: translate(-20%, -70%) rotate(360deg);
+    }
+}
